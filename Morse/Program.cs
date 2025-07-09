@@ -68,7 +68,7 @@ namespace TraductorMorseFacil
                 else
                 {
                     Console.WriteLine("Es texto");
-                    string morseGenerado = string.Join(" ",entradaUsuario.ToUpper().Select(c => TextoAMorse.GetValueOrDefault(c, ""))).Replace("  ", " ");
+                    string morseGenerado = string.Join(" ", entradaUsuario.ToUpper().Select(c => TextoAMorse.GetValueOrDefault(c, ""))).Replace("  ", " ");
                     Console.WriteLine($"Tu mensaje en código Morse es: {morseGenerado}");
                     await ReproducirSonidoMorse(morseGenerado);
                 }
